@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  FOR and WHILE loops.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joey Hatfield.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -45,7 +45,7 @@ def main():
 def run_test_practice_problem3():
     """ Tests the   practice_problem3  function. """
     ####################################################################
-    # TODO: 2. Implement this TEST function.
+    # done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem3  function defined below.
     #   Include at least ** 2 ** ADDITIONAL tests beyond those we wrote.
     #
@@ -134,7 +134,12 @@ def run_test_practice_problem3():
     # SUGGESTION: Ask an assistant to CHECK your tests to confirm
     #             that they are adequate tests!
     ####################################################################
-
+    st.SimpleTestCase(practice_problem3,
+                               [5, 3, .25],
+                               [6, 7, 8])
+    st.SimpleTestCase(practice_problem3,
+                    [0, 2, .345789],
+                    [0, 1])
 
 def practice_problem3(start, n, threshold):
     """
@@ -216,6 +221,13 @@ def practice_problem3(start, n, threshold):
     #    DIFFICULTY:      5
     #    TIME ESTIMATE:   < 15 minutes.
     ####################################################################
+    list_of_yes = []
+    counter = 0
+    while len(list_of_yes)<n:
+        if math.sin(start+counter)+math.cos(start+counter)>threshold:
+            list_of_yes.append(start+counter)
+        counter+=1
+    return list_of_yes
 
 
 # ----------------------------------------------------------------------
