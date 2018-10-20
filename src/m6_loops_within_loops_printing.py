@@ -5,8 +5,8 @@ This problem provides practice at:
   ***  LOOPS WITHIN LOOPS in PRINTING-TO-CONSOLE problems.  ***
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Joey Hatfield.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
 # Students:
@@ -75,7 +75,7 @@ def shape(r):
     For purposes of "lining up", assume r is a single digit.
     """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.
+    # done: 2. Implement and test this function.
     #          Some tests are already written for you (above).
     #
     ####################################################################
@@ -87,7 +87,25 @@ def shape(r):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  15 minutes.
     # ------------------------------------------------------------------
+    counter = 0
+    for j in range(r):
+        for k in range(2*r+1):
+            if k+r-1 < r:
+                if r-j < r:
+                    for i in range(j):
+                        print(' ', end='')
+                for i in range(r-j):
+                    print('+', end='')
+            elif r-k == 0:
+                print('!', end='')
+            elif k > r:
+                if k < (2*r-j+1):
+                    print(2*r-k-j+1, end='')
+                else:
+                    print('-', end='')
 
+
+        print()
 
 # ----------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
