@@ -236,7 +236,6 @@ def big_letters(sequence_of_sequences):
     #    DIFFICULTY:      7
     #    TIME ESTIMATE:  12 minutes.
     # ------------------------------------------------------------------
-    stringthing = ''
     returnlist = ''
     for j in range(len(sequence_of_sequences)):
         for k in range(len(sequence_of_sequences[j])):
